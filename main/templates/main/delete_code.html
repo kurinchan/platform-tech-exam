@@ -1,0 +1,40 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card code-list">
+            <div class="card-header2">Are you sure you want to delete "{{ code.code_title }}"
+                <form method="POST" action="{% url 'delete_code' code.id %}">
+                    {% csrf_token %}
+                     <a href="{% url 'code' %}" class="btn-danger">cancel</a>
+                     <input type="submit" name="Confirm">
+                
+                 </form>
+                 </div>
+          </div>
+        </div>
+        
+</section>
+
+ <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+
