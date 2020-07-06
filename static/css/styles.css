@@ -7447,6 +7447,11 @@ button.bg-dark:focus {
   }
 }
 
+.sticky-footer {
+  flex-shrink: none;
+}
+
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -10085,6 +10090,11 @@ hr.light {
   padding: 8rem 0;
 }
 
+#page-content {
+  flex: 1 0 auto;
+}
+
+
 .page-section2 {
   padding: 5rem 0;
 }
@@ -12229,6 +12239,11 @@ pre code {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control-modified{
+  border-radius: 10em;
+  margin: 5px 5px 5px 5px;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-control {

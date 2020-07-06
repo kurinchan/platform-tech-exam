@@ -15,20 +15,6 @@
             </div>
             <div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 font-weight-light mb-5">I aspire to be a successful software engineer. Also, I love cats.</p>
-                {% for message in messages%}
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                  {{message}}
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                {%endfor%}
-
-                {% if request.user.is_superuser %}
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="{% url 'logout' %}">Log out</a>
-                {% else %}      
-                <a id="l-modal"class="btn btn-primary btn-xl js-scroll-trigger" href="loginModal">Login</a>
-                {% endif %}
                 <br>                  
             </div>
         </div>

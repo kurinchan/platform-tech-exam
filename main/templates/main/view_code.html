@@ -23,6 +23,8 @@
             <div class="card-header2 code-list2">{{codeList.code_title}}
               {% if request.user.is_superuser %} 
               <div id="rightbox"><a href="{% url 'code' %}" class="btn-sm btn-primary">Back</a> &nbsp; &nbsp;<a href="{% url 'update_code' codeList.id %}" class="btn-sm btn-primary">Edit</a> &nbsp; <a id="rightbox"><a data-toggle="modal" data-target="#deletePost" href="" class="btn-sm btn-danger">Delete</a></div>
+              {% else %}
+              <div id="rightbox"><a href="{% url 'code' %}" class="btn-sm btn-primary">Back</a> &nbsp;</div>
               {%endif%}
             </div>
               <pre><code>{{codeList.code_content}}

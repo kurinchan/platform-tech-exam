@@ -6,6 +6,11 @@ from django.contrib import messages
 
 def home(request):
 
+    context = {}
+    return render(request, 'main/home.html')
+
+def loginUser(request):
+
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -19,19 +24,21 @@ def home(request):
             messages.info(request, 'Username OR password is incorrect')
 
     context = {}
-    return render(request, 'main/home.html')
+
+    return render(request, 'main/login.html')
 
 def logoutUser(request):
     logout(request)
     return redirect('home')
 
 def portfolio(request):
+    context = {}
     return render(request, 'main/portfolio.html')
 
 def blog(request):
     blogs = Blog.objects.order_by('-blog_posted').all()
 
-    if request.method == 'POST':
+    if request.method == 'POST':                            #create/post a blog
         form = BlogForm(request.POST)
 
         if form.is_valid():
@@ -77,7 +84,7 @@ def code(request):
 
         if form.is_valid():
             form.save()
-            new_code = Code.objects.order_by('-code_posted').all()
+            new_code = Code.objects.order_by('-code_posted').first()
             return redirect('view_code', new_code.id)
     else:
         form = CodeForm()
