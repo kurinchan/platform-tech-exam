@@ -3,11 +3,23 @@ from .models import *
 from .forms import *
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+import requests
 
 def home(request):
 
-    context = {}
-    return render(request, 'main/home.html')
+    response_cat = requests.get('https://api.thecatapi.com/v1/images/search').json()
+    random_cat = response_cat[0]['url']
+
+    response_weather = requests.get('https://api.openweathermap.org/data/2.5/weather?&units=imperial&lat=13.632186&lon=123.224565&appid=00421149d089b15c750a0745fb619766').json()
+    current_weather = {
+        'temperature' : response_weather['main']['temp'],
+        'description' : response_weather['weather'][0]['description'],
+        'icon' : response_weather['weather'][0]['icon'],
+    }
+    
+
+    context = {'random_cat' : random_cat, 'current_weather' : current_weather }
+    return render(request, 'main/home.html', context)
 
 def loginUser(request):
 

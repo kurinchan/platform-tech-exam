@@ -4,7 +4,7 @@
 
 <div class="container">
   {% if request.user.is_superuser %}
-    <a class="btn btn-modified " data-toggle="modal" data-target="#addPostModal" href="">+</a>  
+    <a id="addPostButton" class="btn btn-modified " data-toggle="modal" data-target="#addPostModal" href="">+</a>  
   {% endif %}
     <div class="container">
     
@@ -54,7 +54,6 @@
               </div>
           </div>
       </header>
-      <!-- About-->
       
       <section class="page-section2" id="#blogList">
         {% for blog in blogs %}
