@@ -25,7 +25,7 @@ SECRET_KEY = '0(cux@7^%+b@$l0-72gwkn17d1dm5wgpga9(ew8kkbf(#$7ixk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['karens-lair.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['karenslair.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -43,7 +43,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -120,9 +122,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
 
@@ -131,4 +133,3 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-

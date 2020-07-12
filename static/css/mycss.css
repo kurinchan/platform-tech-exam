@@ -1,3 +1,120 @@
+<<<<<<< HEAD
+.catimg {
+    border-radius: 50%;
+    border: solid 10px whitesmoke;
+    width:200px;
+    height:200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.5) 100%)
+
+
+}
+
+.catcont {
+    text-align: center;
+}
+
+#leftbox { 
+    float:left;  
+} 
+#middlebox{ 
+    float:left;  
+} 
+#rightbox{ 
+    float:right; }
+.blog-post-color {
+background-color:whitesmoke;
+border: 10px;
+padding: 20px;
+
+}
+
+#codeFile{
+resize:none;
+}
+
+.card-1:hover {
+border-radius: 15px 50px 30px 5px;
+}
+
+.code-list {
+border: 10px;
+background-color: #FFFFFF;
+border-radius:0.5cm;
+box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+.code-list2 {
+border: 10px;
+background-color: #FFFFFF;
+box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.card-1 {
+background-color:whitesmoke;
+border: 10px;
+padding: 20px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-3 {
+    background-color:#355c7d;
+    border: 10px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+.post-blog {
+background-color:#f4623a;
+border: 10px;
+padding: 20px;
+border-radius: 2cm;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.text-area-blog {
+resize:none;
+width:435px;
+height: 250px;
+
+}
+.date-color{
+color:#f4623a;
+}
+
+.btn-modified {
+width: 50px;
+height:50px;
+border-radius: 50%;
+background-color:	#efdef5;
+color:#414f6f;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+font-size: 25px;
+float: right;
+margin-left: 50px;
+margin-top: 360px;
+
+}
+.btn-modified:hover{
+background-color:#414f6f;
+color:#efdef5;
+}
+
+.th-size {
+font-size:
+}
+.container.modified-font{
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.card-margin {
+margin-left: auto;
+}
+
+a{
+    text-decoration: none;
+=======
 #leftbox { 
     float:left;  
 } 
@@ -93,4 +210,5 @@ margin-left: auto;
 
 a{
     text-decoration: none;
+>>>>>>> bc1000db8c48c1e68896bc37fe6e054a1877830a
 }

@@ -1,3 +1,175 @@
+<<<<<<< HEAD
+<!-- MAIN TEMPLATE -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Karen's Lair</title>
+    
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/vs2015.min.css">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css" href="{% static '/css/mycss.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}"/> 
+
+        <style>
+            
+#leftbox { 
+    float:left;  
+} 
+#middlebox{ 
+    float:left;  
+} 
+#rightbox{ 
+    float:right; }
+.blog-post-color {
+background-color:whitesmoke;
+border: 10px;
+padding: 20px;
+
+}
+
+#codeFile{
+resize:none;
+}
+
+.code-list {
+border: 10px;
+background-color: #FFFFFF;
+border-radius:0.5cm;
+box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.code-list2 {
+border: 10px;
+background-color: #FFFFFF;
+
+}
+
+.card-1 {
+background-color:whitesmoke;
+border: 10px;
+padding: 20px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+border-radius: 10px;
+}
+
+.post-blog {
+background-color:#f4623a;
+border: 10px;
+padding: 20px;
+border-radius: 2cm;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.text-area-blog {
+resize:none;
+width:435px;
+height: 250px;
+
+}
+.date-color{
+color:#f4623a;
+}
+
+.btn-modified {
+width: 50px;
+height:50px;
+border-radius: 50%;
+background-color:#f4623a;
+color:white;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+font-size: 25px;
+float: right;
+margin-left: 50px;
+margin-top: 360px;
+
+}
+
+
+.element-1 {
+  box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -2px -2px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.element-2 {
+  box-shadow: 
+    12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+    -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
+}
+.btn-modified:hover{
+background-color:#f03400;
+color:white;
+}
+
+.container.modified-font{
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.card-margin {
+margin-left: auto;
+}
+
+        </style>
+    </head>
+    <body class="bg-light" id="page-top">
+        <div id="page-content">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">KM </a>
+                <button class="navbar-toggler navbar-toggler-middle" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'portfolio' %}">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'blog' %}">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'code' %}">Code</a></li>
+                        {% if request.user.is_superuser %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">Logout</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+            {% block content %}
+
+
+            {% endblock %}
+
+                <footer class="bg-footer py-5 sticky-footer">
+                    <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Karen's Lair</div></div>
+                </footer>
+
+                <!-- Bootstrap core JS-->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+                <!-- Third party plugin JS-->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+                <script src="{% static 'js/scripts.js' %}"></script>
+            </div>
+    </body>
+
+
+</html>
+
+
+=======
 <!-- MAIN TEMPLATE -->
 {% load static %}
 <!DOCTYPE html>
@@ -174,3 +346,4 @@ margin-left: auto;
 </html>
 
 
+>>>>>>> bc1000db8c48c1e68896bc37fe6e054a1877830a
